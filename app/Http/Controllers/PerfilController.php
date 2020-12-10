@@ -62,7 +62,7 @@ class PerfilController extends Controller
         // Validar
         $data = request()->validate([
             'nombre' => 'required',
-            'url' => 'required',
+            'url',
             'biografia' => 'required'
         ]);
 
@@ -72,6 +72,7 @@ class PerfilController extends Controller
             $ruta_imagen = $request['imagen']->store('upload-perfiles', 'public');
 
             // Resize de la imagen
+            $img = Image::make($request->file('photo')->getRealPath());
             $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(600, 600 );
             $img->save();
 

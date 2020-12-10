@@ -16,10 +16,10 @@ class UsuarioSeeder extends Seeder
     {
 
         User::create([
-            'name' => 'Juan',
-            'email' => 'correo@correo.com',
+            'name' => 'abnersito',
+            'email' => 'zamora@correo.com',
             'password' => Hash::make('12345678'),
-            'url' => 'http://codigoconjuan.com',
+            'url' => 'http://abnersito.com',
         ]);
 
         User::create([

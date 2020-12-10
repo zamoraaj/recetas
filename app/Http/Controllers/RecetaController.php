@@ -66,6 +66,7 @@ class RecetaController extends Controller
     public function store(Request $request)
     {
 
+       // dd($request['imagen']->store('upload-recetas','public'));
         // dd(  $request['imagen']->store('upload-recetas', 'public') );
 
 
